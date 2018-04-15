@@ -1,2 +1,2 @@
-# standup_meeting_example_code
-example code
+# stand_up_meeting
+TA class

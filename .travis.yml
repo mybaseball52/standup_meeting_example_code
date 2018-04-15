@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "6"
+
+deploy:
+  provider: heroku
+  api_key: ffb40bc8-306b-45f2-929b-73133eccdd68
+  app: stand-up-meeting
+  on: master

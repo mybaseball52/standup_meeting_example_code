@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">站立會議</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/newnote">新內容</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="text-center">
+        <h1>新增站立會議內容</h1>
+        <p class="lead">使用本表單繳交會議內容</p>
+    </div>
+
+    {% if message.length > 0 %}
+    <div class="alert alert-danger alert-error">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <form class="form-horizontal" action="newnote" method="post">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>輸入表單</legend>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="memberName">姓名</label>
+                <div class="col-md-4">
+                    <select id="memberName" name="memberName" class="form-control">
+                        <option value="None">成員名單</option>
+                        <option value="Mark">Mark</option>
+                        <option value="David">David</option>
+                        <option value="John">John</option>
+                        <option value="Mary">Mary</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="project">專案類別</label>
+                <div class="col-md-4">
+                    <select id="project" name="project" class="form-control">
+                        <option value="None">(Select Project)</option>
+                        <option value="cos">COS Development</option>
+                        <option value="tmu">TMU Development</option>
+                        <option value="tis">TIS Integration</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="workYesterday">昨日作了什麼？
+                </label>
+                <div class="col-md-6">
+                    <textarea class="form-control" id="workYesterday" name="workYesterday">Yesterday</textarea>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="workToday">今天準備要做：？</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" id="workToday" name="workToday">Today</textarea>
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="impediment">遇到什麼阻礙？</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" id="impediment" name="impediment">None</textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnSaveNote">儲存內容</label>
+                <div class="col-md-4">
+                    <button id="btnSaveNote" name="btnSaveNote" class="btn btn-primary" type="submit">儲存</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>
